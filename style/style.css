@@ -1,0 +1,100 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+/* Body og general regler */
+body{
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    grid-template-rows: auto auto;
+    background-color: #b8b8b8;
+}
+img{
+    max-width: 100%;
+}
+
+header{
+grid-column: 1/-1;
+grid-row: 1;
+background-color: rgba(24, 31, 44, 0.9);
+}
+.indhold{
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+   
+    grid-column: 2/12;
+    grid-row: 2;
+    background-color: #adaeae;
+    border-left: #848484 2px  solid;
+    border-right: #848484 2px  solid;
+}
+/* Nav bar for alle sider */
+header nav ul{
+    grid-column-start: 2;
+    grid-column-end: 10;
+    display:grid;
+    grid-template-columns: repeat(5, 1fr);
+    list-style-type: none;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    grid-gap: 1em;
+    padding:10px 10px;
+}
+header a {
+    text-decoration: none;
+    font-size: 1.5rem;
+    background-color: #471774;
+    color:white;
+    transition: 0.5s all;
+    border:solid #464545 1.5px;
+    padding: 10px;
+    display: block;
+    border-radius: 10px;
+    opacity: 0.8;
+}
+header a:hover{
+    background-color:#892fdd;
+    color: white;
+    box-shadow: 1.5px 1.5px 1.5px 1.5px #464545;
+  
+}
+.teamtreehouse{
+    grid-row: 1;
+    grid-column: 5/9;
+    text-align: center;
+    position: relative;
+    transition: ease 1s;
+    margin: 12px 12px;
+}
+.teamtreehouse:hover{
+    transform: scale(1.2);
+
+}
+/* Kasser i .indhold */
+.box_a,.box_b,.box_c, .box_d {
+    border: solid 2px #464545;
+    margin: 5px;
+    background-color: #b8b8b8;
+
+}
+.box_a{
+    grid-column: 1/13;
+    grid-row: 1;
+    text-align: center;
+
+}
+.box_b{
+    grid-column: 1/7;
+    grid-row: span 2;
+
+}
+.box_c{
+    grid-column: 7/13;
+    grid-row: 2;
+}
+.box_d{
+    grid-column: 7/13;
+    grid-row: 3;
+}
